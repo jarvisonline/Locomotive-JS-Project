@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: "Freight Big Pro";
 }
+html,
+body {
+  overflow-x: clip;
+}
 #main {
   background-color: #000;
 }
@@ -227,7 +231,7 @@ body {
 }
 
 .footer {
-  height: 40vh;
+  height: 30vh;
   width: 100%;
   background-color: #fff;
   display: flex;
@@ -237,6 +241,10 @@ body {
   gap: 40px;
 }
 .footer .foot {
+  padding: 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
   height: 50%;
   width: 100%;
   background-color: #000;
@@ -245,4 +253,17 @@ body {
   text-transform: uppercase;
   font-size: 1vw;
   cursor: pointer;
+}
+.foot-elem {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .footer .foot {
+    display: block;
+  }
+  .image-div {
+    width: 100%; /* Make image-div full width on smaller screens */
+    margin: 10px 0; /* Adjust margin for better spacing */
+  }
 }
